@@ -1,0 +1,373 @@
+/*text style*/
+.title-hero {
+    font-size: 72px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 120.00000476837158%;
+}
+
+.title-page {
+    font-size: 48px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 120.00000476837158%;
+}
+
+.subtitle-subtitle {
+    font-size: 32px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 120.00000476837158%;
+}
+
+.heading-large {
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 120.00000476837158%;
+}
+
+.heading-medium {
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.subheading-subheading {
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 120.00000476837158%;
+}
+
+.body-base {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-medium {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-strong {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-emphasis {
+    font-size: 16px;
+    font-family: Inter;
+    font-style: italic;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-small {
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-small-medium {
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 500;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-small-strong {
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-xsmall {
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 139.9999976158142%;
+}
+
+.body-xxsmall {
+    font-size: 10px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 100%;
+}
+
+.body-code {
+    font-size: 16px;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 100%;
+}
+
+.body-code-small {
+    font-size: 14px;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 100%;
+}
+
+.body-code-xsmall {
+    font-size: 12px;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 100%;
+}
+
+.body-underlined {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+.body-link {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 139.9999976158142%;
+}
+
+
+/*paint style*/
+:root {
+    --white: #ffffff;
+    --gray-50: #fbfbfc;
+    --gray-100: #edeef1;
+    --gray-200: #d7dbe0;
+    --gray-300: #b4bbc5;
+    --gray-400: #8a95a6;
+    --gray-500: #6c798b;
+    --gray-600: #576272;
+    --gray-700: #4c5564;
+    --gray-800: #3d444f;
+    --gray-900: #25292f;
+    --gray-950: #131417;
+    --brand-50: #f8f8fc;
+    --brand-100: #f0eff5;
+    --brand-200: #dfdfeb;
+    --brand-300: #c8c8d8;
+    --brand-400: #aca9bd;
+    --brand-500: #17142b;
+    --brand-600: #141027;
+    --brand-700: #120d1f;
+    --brand-800: #0d0a1a;
+    --brand-900: #0b0715;
+    --brand-950: #040307;
+    --green-50: #f0fdf4;
+    --green-100: #dcfce7;
+    --green-200: #bbf7d0;
+    --green-300: #86efac;
+    --green-400: #4ade81;
+    --green-500: #22c55f;
+    --green-600: #16a34a;
+    --green-700: #157f3d;
+    --green-800: #166534;
+    --green-900: #14532d;
+    --green-950: #052e16;
+    --yellow-50: #fefce8;
+    --yellow-100: #fef9c3;
+    --yellow-200: #fef08a;
+    --yellow-300: #fde147;
+    --yellow-400: #facd15;
+    --yellow-500: #e9b308;
+    --yellow-600: #ca8b04;
+    --yellow-700: #a16307;
+    --yellow-800: #854d0e;
+    --yellow-900: #713f12;
+    --yellow-950: #422006;
+    --red-50: #fef2f2;
+    --red-100: #fee2e2;
+    --red-200: #fecaca;
+    --red-300: #fca5a5;
+    --red-400: #f87271;
+    --red-500: #ef4544;
+    --red-600: #dc2625;
+    --red-700: #b91d1c;
+    --red-800: #991c1b;
+    --red-900: #7f1e1d;
+    --red-950: #450a0a;
+    --orange-50: #fff7ed;
+    --orange-100: #ffedd5;
+    --orange-200: #fed7aa;
+    --orange-300: #feba73;
+    --orange-400: #fc933b;
+    --orange-500: #fa7415;
+    --orange-600: #ea580b;
+    --orange-700: #c3420b;
+    --orange-800: #9b3411;
+    --orange-900: #7c2d12;
+    --orange-950: #431407;
+    --rosa-50: #fff1f2;
+    --rosa-100: #ffe4e6;
+    --rosa-200: #fecdd3;
+    --rosa-300: #fda4af;
+    --rosa-400: #fb7185;
+    --rosa-500: #f43f5e;
+    --rosa-600: #e21d48;
+    --rosa-700: #be123c;
+    --rosa-800: #9f1239;
+    --rosa-900: #881337;
+    --rosa-950: #4c0519;
+    --pink-50: #fdf2f8;
+    --pink-100: #fce7f3;
+    --pink-200: #fbcfe8;
+    --pink-300: #f9a8d4;
+    --pink-400: #f373b6;
+    --pink-500: #eb4899;
+    --pink-600: #da2878;
+    --pink-700: #bd195d;
+    --pink-800: #9c184d;
+    --pink-900: #821943;
+    --pink-950: #500724;
+    --fuchsia-50: #fef4ff;
+    --fuchsia-100: #fce8ff;
+    --fuchsia-200: #f8d0fe;
+    --fuchsia-300: #f1abfc;
+    --fuchsia-400: #e879f9;
+    --fuchsia-500: #d946ef;
+    --fuchsia-600: #bc26d3;
+    --fuchsia-700: #9c1caf;
+    --fuchsia-800: #80198f;
+    --fuchsia-900: #691a75;
+    --fuchsia-950: #44044e;
+    --blue-50: #e8f2fb;
+    --blue-100: #c7dff6;
+    --blue-200: #9bc6ef;
+    --blue-300: #6cace8;
+    --blue-400: #4093e1;
+    --blue-500: #167bda;
+    --blue-600: #167bda;
+    --blue-700: #1369b9;
+    --blue-800: #10579b;
+    --blue-900: #0d467c;
+    --blue-950: #062e53;
+    --lilac-50: #eeeeff;
+    --lilac-100: #e0e1ff;
+    --lilac-200: #c7c8fe;
+    --lilac-300: #a5a7fc;
+    --lilac-400: #8184f8;
+    --lilac-500: #6366f1;
+    --lilac-600: #4649e5;
+    --lilac-700: #383bca;
+    --lilac-800: #3032a3;
+    --lilac-900: #2e3081;
+    --lilac-950: #1b1c4b;
+    --purple-50: #f7f3ff;
+    --purple-100: #efe9fe;
+    --purple-200: #e2d6fe;
+    --purple-300: #cbb5fd;
+    --purple-400: #ad8bfa;
+    --purple-500: #8b5cf6;
+    --purple-600: #713aed;
+    --purple-700: #5e28d9;
+    --purple-800: #4e21b6;
+    --purple-900: #421d95;
+    --purple-950: #2a1065;
+    --aqua-50: #f0f9ff;
+    --aqua-100: #e0f2fe;
+    --aqua-200: #bae6fd;
+    --aqua-300: #7dd3fc;
+    --aqua-400: #38bcf8;
+    --aqua-500: #0ea5ea;
+    --aqua-600: #0283c7;
+    --aqua-700: #0369a1;
+    --aqua-800: #075985;
+    --aqua-900: #0c4a6e;
+    --aqua-950: #082f49;
+    --turquoise-50: #ecfeff;
+    --turquoise-100: #cffafe;
+    --turquoise-200: #a5f3fc;
+    --turquoise-300: #68e6f8;
+    --turquoise-400: #23d1ed;
+    --turquoise-500: #07b6d5;
+    --turquoise-600: #0990b1;
+    --turquoise-700: #0f738f;
+    --turquoise-800: #155e75;
+    --turquoise-900: #164e63;
+    --turquoise-950: #083344;
+    --cyan-50: #f0fdfa;
+    --cyan-100: #ccfbf1;
+    --cyan-200: #9af5e4;
+    --cyan-300: #5fe9d4;
+    --cyan-400: #2ed3bf;
+    --cyan-500: #15b8a7;
+    --cyan-600: #0e9388;
+    --cyan-700: #10756f;
+    --cyan-800: #115e59;
+    --cyan-900: #134e4a;
+    --cyan-950: #042f2e;
+    --teal-50: #ecfdf5;
+    --teal-100: #d1fae5;
+    --teal-200: #a7f3d0;
+    --teal-300: #6ee7b8;
+    --teal-400: #34d39a;
+    --teal-500: #10b982;
+    --teal-600: #05966a;
+    --teal-700: #047858;
+    --teal-800: #065f47;
+    --teal-900: #064e3b;
+    --teal-950: #022c22;
+    --lime-50: #f7fee7;
+    --lime-100: #ecfccb;
+    --lime-200: #daf99d;
+    --lime-300: #bff264;
+    --lime-400: #a4e635;
+    --lime-500: #85cc16;
+    --lime-600: #66a30d;
+    --lime-700: #4e7c0f;
+    --lime-800: #3f6212;
+    --lime-900: #365314;
+    --lime-950: #1a2e05;
+    --gradient-grey-g-01: support only solid color;
+    --gradient-grey-g-02: support only solid color;
+    --gradient-grey-g-03: support only solid color;
+    --gradient-grey-g-04: support only solid color;
+    --gradient-brand-brand-01: support only solid color;
+    --gradient-brand-brand-02: support only solid color;
+    --gradient-brand-brand-03: support only solid color;
+    --gradient-brand-brand-04: support only solid color;
+    --gradient-misc-phoenix: support only solid color;
+    --gradient-misc-dune: support only solid color;
+    --gradient-misc-peach: support only solid color;
+    --gradient-misc-candy: support only solid color;
+    --gradient-misc-marshmallow: support only solid color;
+    --gradient-misc-melon: support only solid color;
+    --gradient-misc-lagoon: support only solid color;
+    --gradient-misc-algae: support only solid color;
+    --gradient-misc-emerald: support only solid color;
+    --gradient-misc-royalty: support only solid color;
+    --gradient-misc-void: support only solid color;
+    --gradient-misc-pearl: support only solid color;
+}
