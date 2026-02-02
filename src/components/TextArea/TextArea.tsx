@@ -12,7 +12,8 @@ export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     ({ label, error, errorMessage, helperText, resize = 'vertical', className, disabled, style, ...props }, ref) => {
 
-        const inputId = props.id || React.useId();
+        const generatedId = React.useId();
+        const inputId = props.id || generatedId;
         const helperId = helperText ? `${inputId}-helper` : undefined;
         const errorId = errorMessage ? `${inputId}-error` : undefined;
         const describedBy = [helperId, errorId].filter(Boolean).join(' ');

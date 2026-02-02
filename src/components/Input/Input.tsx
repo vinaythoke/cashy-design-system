@@ -14,7 +14,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     ({ label, error, errorMessage, helperText, leftIcon, rightIcon, className, disabled, type = 'text', ...props }, ref) => {
 
         // Accessibility: Associate label and helper text with input
-        const inputId = props.id || React.useId();
+        const generatedId = React.useId();
+        const inputId = props.id || generatedId;
         const helperId = helperText ? `${inputId}-helper` : undefined;
         const errorId = errorMessage ? `${inputId}-error` : undefined;
         const describedBy = [helperId, errorId].filter(Boolean).join(' ');
