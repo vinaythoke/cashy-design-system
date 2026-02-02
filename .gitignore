@@ -13,6 +13,10 @@ dist-ssr
 *.local
 storybook-static
 
+# Design Tokens (Raw)
+Figma Tokens Export
+scripts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
