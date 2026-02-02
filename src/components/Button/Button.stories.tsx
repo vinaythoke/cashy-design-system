@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within, fn } from '@storybook/test';
 import { Button } from './Button';
 
 // Mock icons for stories
@@ -74,6 +75,15 @@ export const Primary: Story = {
     args: {
         variant: 'primary',
         children: 'Primary',
+        onClick: fn(),
+    },
+    play: async ({ args, canvasElement }) => {
+        const canvas = within(canvasElement);
+        const button = canvas.getByRole('button');
+
+        // Test button click
+        await userEvent.click(button);
+        await expect(args.onClick).toHaveBeenCalled();
     },
 };
 

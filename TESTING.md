@@ -45,7 +45,27 @@ Automated accessibility testing in Storybook.
 - Keyboard navigation
 - Screen reader compatibility
 
-### 3. Visual Regression Tests (Chromatic)
+### 3. Interaction Tests (Storybook)
+Interactive tests that simulate user behavior directly in Storybook.
+
+**How to use:**
+1. Run Storybook: `npm run storybook`
+2. Open any story with a test (look for the play icon)
+3. Click the **Interactions** panel at the bottom
+4. Watch the test run automatically or click **Play** to re-run
+
+**What it tests:**
+- User interactions (typing, clicking, hovering)
+- Component state changes
+- Event handler calls
+- Real user workflows
+
+**Example stories with interaction tests:**
+- Input > Base - Tests typing an email
+- Button > Primary - Tests button clicks
+- TextArea > Default - Tests typing descriptions
+
+### 4. Visual Regression Tests (Chromatic)
 Automated visual testing on every commit.
 
 **Runs automatically on:**

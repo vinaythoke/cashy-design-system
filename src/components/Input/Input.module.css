@@ -40,8 +40,19 @@
 
 .inputWrapper:focus-within:not(.error) {
     border-color: var(--border-focused);
-    box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--blue-100);
-    /* Simulate ring */
+    box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--purple-200);
+    /* Focus ring */
+}
+
+/* Dark mode focus ring */
+[data-theme="dark"] .inputWrapper:focus-within:not(.error) {
+    box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--purple-800);
+}
+
+@media (prefers-color-scheme: dark) {
+    .inputWrapper:focus-within:not(.error) {
+        box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--purple-800);
+    }
 }
 
 .inputWrapper.error {
@@ -68,8 +79,18 @@
     height: 100%;
 }
 
+/* Reduce padding when icons are present */
+.leftIcon+.input {
+    padding-left: 0;
+}
+
+.input:has(+ .rightIcon) {
+    padding-right: 0;
+}
+
 .input::placeholder {
-    color: var(--text-placeholder);
+    font-size: var(--body-size-medium);
+    color: var(--text-subtlest);
 }
 
 .input:disabled {
@@ -77,13 +98,53 @@
     color: var(--text-disabled);
 }
 
-.leftIcon,
+.leftIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: var(--space-300);
+    /* 12px */
+    padding-right: var(--space-100);
+    /* 4px */
+    color: var(--text-subtle);
+}
+
 .rightIcon {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 var(--space-300);
+    padding-left: var(--space-100);
+    /* 4px */
+    padding-right: var(--space-300);
+    /* 12px */
     color: var(--text-subtle);
+}
+
+/* Number input spinner styling - completely transparent background */
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+    cursor: pointer;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Use color-scheme to make arrows adapt to theme */
+.input[type="number"] {
+    color-scheme: light;
+}
+
+[data-theme="dark"] .input[type="number"] {
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    .input[type="number"] {
+        color-scheme: dark;
+    }
 }
 
 .helperText {

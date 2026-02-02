@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { TextArea } from './TextArea';
 
 const meta: Meta<typeof TextArea> = {
@@ -19,7 +20,7 @@ const meta: Meta<typeof TextArea> = {
     },
     decorators: [
         (Story) => (
-            <div style={{ width: '400px', maxWidth: '100%' }}>
+            <div style={{ width: '100%', maxWidth: '600px' }}>
                 <Story />
             </div>
         ),
@@ -36,6 +37,14 @@ export const Default: Story = {
         placeholder: 'Enter a detailed description...',
         rows: 4,
         helperText: 'Max 500 characters',
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+        const textarea = canvas.getByPlaceholderText('Enter a detailed description...');
+
+        // Test typing in textarea
+        await userEvent.type(textarea, 'This is a test description for the textarea component.', { delay: 50 });
+        await expect(textarea).toHaveValue('This is a test description for the textarea component.');
     },
 };
 

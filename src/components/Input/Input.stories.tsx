@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { Input, type InputProps } from './Input';
 
 // Icon components
@@ -51,7 +52,7 @@ const meta: Meta<StoryArgs> = {
     },
     decorators: [
         (Story) => (
-            <div style={{ width: '400px', maxWidth: '100%' }}>
+            <div style={{ width: '100%', maxWidth: '600px' }}>
                 <Story />
             </div>
         ),
@@ -78,6 +79,14 @@ export const Base: Story = {
         showLeftIcon: false,
         showRightIcon: false,
     },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+        const input = canvas.getByPlaceholderText('Enter your email');
+
+        // Test typing in the input
+        await userEvent.type(input, 'test@example.com', { delay: 100 });
+        await expect(input).toHaveValue('test@example.com');
+    },
 };
 
 // --- Search Input ---
@@ -88,6 +97,14 @@ export const Search: Story = {
         type: 'search',
         showLeftIcon: true,
         showRightIcon: false,
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+        const input = canvas.getByPlaceholderText('Search for items...');
+
+        // Test search functionality
+        await userEvent.type(input, 'laptop', { delay: 100 });
+        await expect(input).toHaveValue('laptop');
     },
 };
 
