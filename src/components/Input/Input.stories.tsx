@@ -1,6 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Input } from './Input';
 
+// Icon components
+const SearchIcon = () => (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+);
+
+const DollarIcon = () => (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="12" y1="1" x2="12" y2="23"></line>
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+    </svg>
+);
+
 const meta: Meta<typeof Input> = {
     title: 'Components/Input',
     component: Input,
@@ -15,6 +30,16 @@ const meta: Meta<typeof Input> = {
         },
         error: { control: 'boolean' },
         disabled: { control: 'boolean' },
+        showLeftIcon: {
+            control: 'boolean',
+            description: 'Show left icon',
+            table: { category: 'Icons' }
+        },
+        showRightIcon: {
+            control: 'boolean',
+            description: 'Show right icon',
+            table: { category: 'Icons' }
+        },
         leftIcon: { table: { disable: true } },
         rightIcon: { table: { disable: true } },
     },
@@ -25,6 +50,13 @@ const meta: Meta<typeof Input> = {
             </div>
         ),
     ],
+    render: ({ showLeftIcon, showRightIcon, ...args }) => (
+        <Input
+            {...args}
+            leftIcon={showLeftIcon ? <SearchIcon /> : undefined}
+            rightIcon={showRightIcon ? <DollarIcon /> : undefined}
+        />
+    ),
 };
 
 export default meta;
@@ -37,23 +69,19 @@ export const Base: Story = {
         placeholder: 'Enter your email',
         type: 'email',
         helperText: 'We will not share your email.',
+        showLeftIcon: false,
+        showRightIcon: false,
     },
 };
 
 // --- Search Input ---
-const SearchIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-    </svg>
-);
-
 export const Search: Story = {
     args: {
         label: 'Search',
         placeholder: 'Search for items...',
         type: 'search',
-        leftIcon: <SearchIcon />,
+        showLeftIcon: true,
+        showRightIcon: false,
     },
 };
 
@@ -65,6 +93,8 @@ export const Number: Story = {
         type: 'number',
         min: 0,
         max: 100,
+        showLeftIcon: false,
+        showRightIcon: false,
     },
 };
 
