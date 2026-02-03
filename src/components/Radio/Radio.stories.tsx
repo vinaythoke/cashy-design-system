@@ -5,7 +5,7 @@ import { RadioGroup } from './RadioGroup';
 const meta = {
     title: 'Components/Radio',
     component: RadioGroup, // The main interaction is usually via group
-    subcomponents: { Radio } as Record<string, React.ComponentType<any>>,
+    subcomponents: { Radio },
     parameters: {
         layout: 'centered',
     },
