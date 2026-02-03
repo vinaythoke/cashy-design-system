@@ -65,23 +65,15 @@ npm run build
 
 ## 📦 Components
 
-### Button
-A versatile button component with multiple variants and states.
+The design system includes a growing library of foundational components.
 
-**Variants:**
-- `primary` - Main call-to-action
-- `secondary` - Alternative actions
-- `tertiary` - Low-emphasis actions
-- `danger-bold` - Destructive actions (high emphasis)
-- `danger-subtle` - Destructive actions (low emphasis)
+For detailed documentation, features, and usage, see [COMPONENTS.md](./COMPONENTS.md).
 
-**Features:**
-- Icon support (left/right)
-- Loading states
-- Disabled states
-- Icon-only mode
-- Three sizes (small, medium, large)
-- Full accessibility support
+**Available Components:**
+- [Button](./COMPONENTS.md#button)
+- [Toggle](./COMPONENTS.md#toggle)
+- [Radio](./COMPONENTS.md#radio)
+- [Checkbox](./COMPONENTS.md#checkbox)
 
 ## 🧪 Testing
 

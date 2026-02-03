@@ -15,6 +15,11 @@
     text-decoration: none;
 }
 
+.button:focus-visible {
+    outline: 3px solid var(--border-focused);
+    outline-offset: 2px;
+}
+
 .button:disabled,
 .button--disabled {
     cursor: not-allowed;
