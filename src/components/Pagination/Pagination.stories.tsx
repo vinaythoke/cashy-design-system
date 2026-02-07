@@ -35,9 +35,10 @@ export default meta;
 type Story = StoryObj<typeof Pagination>;
 
 // Helper to make stories interactive
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import type { PaginationProps } from './Pagination';
 
-const InteractivePagination = (args: any) => {
+const InteractivePagination = (args: PaginationProps) => {
     const [page, setPage] = useState(args.currentPage);
 
     useEffect(() => {

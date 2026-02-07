@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { TabsContext } from './Tabs';
+import { TabsContext } from './TabsContext';
 
 export interface TabProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     /**

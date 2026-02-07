@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Tabs.css';
+import { TabsContext } from './TabsContext';
 
 export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
     /**
@@ -28,11 +29,7 @@ export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
 }
 
-export const TabsContext = React.createContext<{
-    value: string;
-    onValueChange: (value: string) => void;
-    variant: 'underline' | 'pill' | 'ghost' | 'segment';
-} | null>(null);
+
 
 export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(({
     value: controlledValue,

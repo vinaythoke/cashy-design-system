@@ -47,7 +47,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(({
     itemsPerPage = 10,
     onItemsPerPageChange,
     itemsPerPageOptions = [10, 20, 50, 100],
-    totalItems = 0,
+    // totalItems = 0, // Unused
     className = '',
     ...props
 }, ref) => {
